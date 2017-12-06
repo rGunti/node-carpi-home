@@ -64,11 +64,9 @@ for (let source in routes) {
 
 debug('Configuring Error Handler...');
 // 404 Handler
-// TODO: Make it better, don't use the default error handler for this
 app.use((req, res, next) => {
-    let err = new Error('not found');
-    err.status = 404;
-    next(err);
+    res.status(404);
+    HandleRender.render(res, '404', 'Page Not Found');
 });
 
 // Default Error Handler
