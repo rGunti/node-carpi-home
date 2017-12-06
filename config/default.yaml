@@ -1,0 +1,15 @@
+app:
+  fullName: rGunti.car Home
+  shortName: rGunti.car
+  instance: dev
+server:
+  port: 2020
+internals:
+  dirs:
+    views: /views
+    hbs:
+      partials: /views/partials
+      layouts: /views/layouts
+      defaultLayout: /views/layouts/main.hbs
+    routes: /config/routes.json
+    staticRoutes: /config/static-routes.json
