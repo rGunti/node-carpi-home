@@ -1,1 +1,18 @@
-<h3>Hello World!</h3>
+<div class="collection">
+    {{#each data}}
+        <a target="_blank"
+           href="{{this.url}}"
+           class="collection-item avatar indigo-text">
+            {{#if this.icon}}
+                <img src="{{this.icon}}"
+                     class="circle">
+            {{else}}
+                <i class="circle material-icons indigo">
+                    exit_to_app
+                </i>
+            {{/if}}
+            <span class="title">{{this.title}}</span>
+            <p>{{this.description}}</p>
+        </a>
+    {{/each}}
+</div>

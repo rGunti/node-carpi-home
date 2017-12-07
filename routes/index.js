@@ -10,13 +10,20 @@
  */
 
 const debug = require('debug')('StartPage:Routes/index');
+const config = require('config');
+const path = require('path');
 const HandleRender = require('../ui/handlebar-renderer');
 
 const router = require('express').Router();
 
+const LINK_CONFIG = config.get('app.links');
+const links = require(LINK_CONFIG.startsWith('./')
+    ? path.join(__dirname, '..', LINK_CONFIG)
+    : LINK_CONFIG);
+
 router.get('/', (req, res, next) => {
     debug(`Requested from ${req.ip}`);
-    HandleRender.render(res, 'index', 'Home');
+    HandleRender.render(res, 'index', 'Home', links);
 });
 
 module.exports = router;

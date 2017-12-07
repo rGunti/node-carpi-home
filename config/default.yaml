@@ -2,6 +2,7 @@ app:
   fullName: rGunti.car Home
   shortName: rGunti.car
   instance: dev
+  links: ./config/links.json
 server:
   port: 2020
 internals:

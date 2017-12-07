@@ -1,0 +1,25 @@
+[{
+  "title": "Music Player",
+  "url": "http://localhost:6600",
+  "icon": "/public/img/apps/mpd-ui.png",
+  "description": "Control music playback, create playlist"
+},{
+  "title": "System Status",
+  "url": "http://localhost:5000",
+  "icon": "/public/img/apps/system-status.png",
+  "description": "Check system health"
+},{
+  "title": "System Control",
+  "url": "http://localhost:4000",
+  "icon": "/public/img/apps/system-control.png",
+  "description": "Shutdown or reboot the system"
+},{
+  "title": "File Browser",
+  "url": "http://localhost:5050",
+  "icon": "/public/img/apps/file-browser.png",
+  "description": "Browser and download files and upload new ones"
+},{
+  "title": "Music Stream",
+  "url": "http://localhost:8080",
+  "description": "(Live)Stream music playback from Music Player to your device"
+}]
