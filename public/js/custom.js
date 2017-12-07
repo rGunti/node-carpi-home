@@ -11,9 +11,16 @@
 
 var locale = window.navigator.userLanguage || window.navigator.language;
 
+function setTime() {
+    $('.current-time').text(moment().format('HH:mm:ss'));
+    setTimeout(setTime, 250);
+}
+
 $(document).ready(function() {
     moment.locale(locale);
     $('.button-collapse').sideNav();
     $('.modal').modal();
     $('.modal.non-dismissible').modal({ dismissible: false });
+
+    setTime();
 });
